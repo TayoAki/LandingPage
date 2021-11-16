@@ -45,9 +45,21 @@ body {
   position: relative;
 }
 
+.home-image .circle2 {
+  position: absolute;
+  /*z-index: 1;*/
+  height: 400px;
+  width: 400px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .home-image .circle {
   position: absolute;
-  z-index: 1;
+  /*z-index: 1;*/
   height: 400px;
   width: 400px;
   border: 1px solid rgba(255,255,255,0.2);
@@ -68,6 +80,28 @@ body {
   top: 30px;
   transform-origin: 170px 170px;
   animation: spin_01 10s linear infinite;
+}
+
+.home-image .circle2::before {
+  content: '';
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(174,25,0,0.26);
+  border-radius: 50%;
+  left: 30px;
+  top: 30px;
+  transform-origin: 170px 170px;
+  animation: spin_02 10s linear infinite;
+}
+
+@keyframes spin_02 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes spin_01 {
